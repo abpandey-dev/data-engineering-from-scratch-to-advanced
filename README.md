@@ -2,7 +2,7 @@
 
 A complete course for becoming a strong data engineer, with no experience needed. It starts at "what is a pipeline?" and goes to designing whole data platforms. Every idea is worked with real numbers, and every answer is tested before publishing.
 
-**[Open the course](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/)** · **[Start Here notebook](notebooks/00_START_HERE.ipynb)** · **[All notebooks](notebooks/README.md)** · **[Labs](labs/README.md)**
+**[Run the course locally](#run-it-locally)** · **[Start Here notebook](notebooks/00_START_HERE.ipynb)** · **[All notebooks](notebooks/README.md)** · **[Labs](labs/README.md)**
 
 ![How the course works](docs/how-it-works.svg)
 
@@ -12,8 +12,8 @@ A complete course for becoming a strong data engineer, with no experience needed
 
 | Way | Best for | What's there |
 |---|---|---|
-| [**Website**](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/) | visual learning | theory, lessons, and watching answers run line by line, in the browser |
-| [**Notebooks**](notebooks/README.md) | working through it, teacher-style | self-checking practice, hidden hints and answers. Open in Colab with nothing to install |
+| [**Website**](#run-it-locally) (runs on your machine) | visual learning | theory, lessons, and watching answers run line by line, in the browser |
+| [**Notebooks**](notebooks/README.md) | working through it, teacher-style | self-checking practice, hidden hints and answers. Run them in Jupyter, or upload one to Colab |
 | [**Labs**](labs/README.md) | building | a complete pipeline, real PySpark, and 5 projects to build yourself |
 
 ## All the question types
@@ -61,8 +61,22 @@ No course can make someone top 2% by itself. That also takes building real syste
 
 ## Run it locally
 
+This repo is private, so the site isn't hosted online, and the notebooks' "Open in Colab" badges need you to give Colab access to your private GitHub repos. From the repo folder, run:
+
 ```bash
-python3 -m http.server 8000      # then open http://localhost:8000/course/
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000/course/ in your browser.
+
+For the notebooks, run:
+
+```bash
+pip install notebook numpy pandas matplotlib
+```
+
+```bash
+jupyter notebook notebooks/00_START_HERE.ipynb
 ```
 
 To rebuild after changing content (this needs numpy, pandas and matplotlib):

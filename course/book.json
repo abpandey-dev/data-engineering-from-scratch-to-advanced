@@ -1,0 +1,9 @@
+{
+  "title": "Data Engineering from Scratch to Advanced",
+  "url": "https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/",
+  "unit": "practice questions",
+  "summary": "A step-by-step and an efficient answer for each, which you can watch run line by line.",
+  "trace_brute": true,
+  "plain": true,
+  "prelude": "import math\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n"
+}

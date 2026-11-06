@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Python IDE</title>
+<meta name="description" content="Write, run and visualise Python in your browser — no install. Part of the Learn Python: From Scratch to Advanced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="../engine/style.css?v=7c2a2c4525">
+<link rel="stylesheet" href="ide.css?v=0762e1a992">
+</head>
+<body class="ide-page">
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><span class="logo">py</span><span>Python IDE</span></a>
+    <span id="title" class="ide-title"></span>
+    <a id="back" class="top-link" href="../course/" hidden>← Back</a>
+    <a class="top-link" href="../course/">Course</a>
+    <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+<main class="ide">
+  <div class="toolbar" role="toolbar" aria-label="Editor actions">
+    <button id="run" class="tb primary" type="button" disabled title="Run (Ctrl/⌘ + Enter)">▶ Run</button>
+    <button id="viz" class="tb" type="button" disabled title="Run step by step (Ctrl/⌘ + Shift + Enter)">⏯ Visualize</button>
+    <button id="check" class="tb good" type="button" disabled hidden title="Run the question's tests">✓ Check answer</button>
+    <button id="stop" class="tb danger" type="button" hidden>■ Stop</button>
+    <span class="sep"></span>
+    <select id="examples" class="tb" aria-label="Load an example"><option value="">Examples…</option></select>
+    <button id="reset" class="tb" type="button" title="Go back to the starting code">↺ Reset</button>
+    <button id="share" class="tb" type="button" title="Copy a link to this code">⧉ Share</button>
+    <span id="status" class="status" aria-live="polite">Loading Python…</span>
+  </div>
+  <section class="pane editor-pane" aria-label="Code editor">
+    <textarea id="code" spellcheck="false"></textarea>
+  </section>
+  <section class="pane side-pane">
+    <div class="tabs ide-tabs" role="tablist">
+      <button type="button" role="tab" data-tab="out" aria-selected="true">Output</button>
+      <button type="button" role="tab" data-tab="viz">Visualize</button>
+      <button type="button" role="tab" data-tab="tests" hidden>Tests</button>
+    </div>
+    <div class="panel" data-panel="out">
+      <pre id="out" class="console big"><span class="empty-v">Press ▶ Run (or Ctrl/⌘ + Enter). Output appears here.</span></pre>
+      <label class="stdin-label" for="stdin">Input — one line for each <code>input()</code> call</label>
+      <textarea id="stdin" class="stdin" rows="3" spellcheck="false" placeholder="e.g.&#10;Ana&#10;21"></textarea>
+    </div>
+    <div class="panel" data-panel="viz" hidden><p class="empty-v">Press ⏯ Visualize to watch your code run one line at a time — every variable, the call stack and the output.</p></div>
+    <div class="panel" data-panel="tests" hidden></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/comment/comment.min.js"></script>
+<script src="../engine/app.js?v=5f1a53219a"></script>
+<script src="ide.js?v=bb739bb58c"></script>
+</body>
+</html>

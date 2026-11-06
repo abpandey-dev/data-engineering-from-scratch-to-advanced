@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data Engineering</title>
+<meta name="description" content="Become a strong data engineer from scratch: Python, SQL, data modelling, pipelines, Spark, Airflow, Kafka, streaming, lakehouse, cloud and system design, with visual step-by-step answers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../engine/style.css?v=7c2a2c4525">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#/"><span class="logo">DE</span><span>Data Engineering</span></a>
+    <div class="search" role="search">
+      <input id="q" type="search" placeholder="Search topics and practice questions…  ( / )" autocomplete="off" aria-label="Search">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <a class="top-link" href="../ide/" target="_blank" rel="noopener">✎ IDE</a>
+    <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+<main id="app" class="wrap" tabindex="-1"></main>
+<footer class="foot"><a href="https://github.com/abpandey-dev/data-engineering-from-scratch-to-advanced">Source and notebooks on GitHub</a> · Every answer here is run against its tests before publishing.</footer>
+<script>
+window.BOOK = {
+  title: "Data Engineering", short: "Data Engineering", unit: "practice questions",
+  lead: "Learn data engineering <b>from your first query to senior-level system design</b>. Each topic has theory, lessons worked with real numbers, and <b>20 practice questions</b> you can watch run line by line, plus scenario and design questions for interviews.",
+  how: [["1 · Go in order", "Each topic builds on the last. New to code? You can start at topic 1 with no experience."],
+        ["2 · Work the numbers", "Every idea is calculated with small examples you can check by hand."],
+        ["3 · Answer before looking", "Try each question, then watch the step-by-step answer and the efficient one run."],
+        ["4 · Build real things", "Run the hands-on labs with real PySpark and SQL, and say the scenario answers out loud."]],
+  searchHint: "Try “window function”, “idempotent”, “shuffle”, “watermark”, “SCD”, “Parquet” or a question title.",
+  bruteLabel: "Step by step", optLabel: "The efficient way",
+  watchBrute: "Watch the step-by-step version run", watchOpt: "Watch the efficient version run",
+  qsHeading: "{n} practice questions"
+};
+</script>
+<script src="data/index.js?v=41ff696508"></script>
+<script src="../engine/app.js?v=5f1a53219a"></script>
+</body>
+</html>

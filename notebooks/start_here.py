@@ -43,7 +43,8 @@ That's roughly 6 months. These are guides, so move on when you can tick a notebo
 4. **Type code, never paste it.** Then change something, and predict what happens.
 5. **Come back later.** Redo a question after 3 days and again after 2 weeks, from a blank cell. It's the most effective habit here.
 6. **Say answers out loud,** especially the scenario questions.
-7. **Build something.** See [the labs and project ideas](../labs/README.md). Reading won't teach you what a failed backfill feels like.
+7. **Practise SQL in the [SQL IDE](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/ide/sql.html).** It runs in your browser and checks your answers.
+8. **Build something.** See [the labs and project ideas](../labs/README.md). Reading won't teach you what a failed backfill feels like.
 
 **A good session (about 90 minutes):** 15 minutes redoing old questions, 30 on a lesson, 45 on new questions.
 """),

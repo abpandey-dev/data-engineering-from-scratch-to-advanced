@@ -29,6 +29,7 @@ big AS (                         -- step 2: only the big ones
 )
 SELECT * FROM big;</code></pre>
 <p>Regions N and S total 600 and 500, so only N remains.</p>
+<p>Try these in the <a href="../ide/sql.html">SQL IDE</a>: choose the Analytics database, or open the Practice tab.</p>
 <p>Professional SQL is mostly chains of CTEs: import the data, clean it, join it, aggregate it. Each step can be checked on its own by selecting from it, which makes debugging far easier.</p>
 """, practice=["Readable Steps With a CTE"])
 

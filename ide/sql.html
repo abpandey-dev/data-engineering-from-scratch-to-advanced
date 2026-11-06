@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SQL IDE</title>
+<meta name="description" content="Write and run real SQL in your browser with nothing to install, on sample databases, with practice questions that check your answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css">
+<link rel="stylesheet" href="../engine/style.css?v=7c2a2c4525">
+<link rel="stylesheet" href="ide.css?v=0762e1a992">
+<link rel="stylesheet" href="sql.css?v=2c2e9ab118">
+</head>
+<body class="ide-page sql-page">
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../course/"><span class="logo">SQL</span><span>SQL IDE</span></a>
+    <span id="title" class="ide-title"></span>
+    <a class="top-link" href="../course/">Course</a>
+    <a class="top-link" href="index.html">Python IDE</a>
+    <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+<main class="ide">
+  <div class="toolbar" role="toolbar" aria-label="Editor actions">
+    <button id="run" class="tb primary" type="button" disabled title="Run all, or just the selected text (Ctrl/⌘ + Enter)">▶ Run</button>
+    <button id="check" class="tb good" type="button" hidden title="Compare your result with the expected answer (Ctrl/⌘ + Shift + Enter)">✓ Check answer</button>
+    <button id="stop" class="tb danger" type="button" hidden>■ Stop</button>
+    <span class="sep"></span>
+    <label class="tb-label" for="db">Database</label>
+    <select id="db" class="tb"></select>
+    <select id="examples" class="tb" aria-label="Load an example"><option value="">Examples…</option></select>
+    <button id="reset" class="tb" type="button" title="Rebuild this database, undoing any changes">↺ Reset data</button>
+    <button id="share" class="tb" type="button" title="Copy a link to this query">⧉ Share</button>
+    <span id="status" class="status" aria-live="polite">Loading SQLite…</span>
+  </div>
+  <section class="pane editor-pane" aria-label="SQL editor">
+    <div id="question" class="q-card" hidden></div>
+    <textarea id="code" spellcheck="false"></textarea>
+  </section>
+  <section class="pane side-pane">
+    <div class="tabs ide-tabs" role="tablist">
+      <button type="button" role="tab" data-tab="results" aria-selected="true">Results</button>
+      <button type="button" role="tab" data-tab="tables" aria-selected="false">Tables</button>
+      <button type="button" role="tab" data-tab="practice" aria-selected="false">Practice</button>
+    </div>
+    <div class="panel" data-panel="results" id="sql-results" aria-live="polite"></div>
+    <div class="panel" data-panel="tables" id="tables" hidden></div>
+    <div class="panel" data-panel="practice" id="practice" hidden></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/sql/sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/comment/comment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/sql-hint.min.js"></script>
+<script src="../engine/app.js?v=f833e82e50"></script>
+<script src="sql-data.js?v=b55f8d542a"></script>
+<script src="sql.js?v=73bec74d29"></script>
+</body>
+</html>

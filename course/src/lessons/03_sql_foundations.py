@@ -36,6 +36,7 @@ LIMIT 10;                -- how many</code></pre>
 <tr><td>A range</td><td><code>day BETWEEN '2026-01-06' AND '2026-02-01'</code> (inclusive)</td></tr>
 <tr><td>Pattern</td><td><code>name LIKE 'A%'</code> means "starts with A"</td></tr></table>
 <p><b>NULL means unknown</b>, and it's not zero or empty. Anything compared to unknown is unknown, so <code>city = NULL</code> finds nothing. Use <code>IS NULL</code>. For a default, use <code>COALESCE(city, 'unknown')</code>.</p>
+<p><b>Practise as you read:</b> the <a href="../ide/sql.html">SQL IDE</a> runs real SQL in your browser, with sample databases and questions that check your answer. Keep it open in another tab, and try each example.</p>
 <p><b>Good habits from day one:</b> name your columns rather than using <code>SELECT *</code>, because tables change and scans cost money. Format queries over several lines, as you'll read them more often than you write them.</p>
 """, practice=["Select Some Columns", "Filter Rows", "IN, BETWEEN and LIKE", "Finding NULLs", "COALESCE"])
 

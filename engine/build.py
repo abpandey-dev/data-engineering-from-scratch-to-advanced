@@ -316,7 +316,7 @@ def readme(topics):
 
 def stamp_assets():
     """Add ?v=<content hash> to local script and style links so browsers never serve stale files."""
-    for page in (BOOK / "index.html", ROOT.parent / "ide" / "index.html"):
+    for page in (BOOK / "index.html", ROOT.parent / "ide" / "index.html", ROOT.parent / "ide" / "sql.html"):
         if not page.exists():
             continue
         html = page.read_text()

@@ -2,7 +2,7 @@
 
 A complete course for becoming a strong data engineer, with no experience needed. It starts at "what is a pipeline?" and goes to designing whole data platforms. Every idea is worked with real numbers, and every answer is tested before publishing.
 
-**[Open the course](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/)** · **[Start Here notebook](notebooks/00_START_HERE.ipynb)** · **[All notebooks](notebooks/README.md)** · **[Labs](labs/README.md)**
+**[Open the course](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/)** · **[SQL IDE](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/ide/sql.html)** · **[Start Here notebook](notebooks/00_START_HERE.ipynb)** · **[All notebooks](notebooks/README.md)** · **[Labs](labs/README.md)**
 
 ![How the course works](docs/how-it-works.svg)
 
@@ -13,6 +13,7 @@ A complete course for becoming a strong data engineer, with no experience needed
 | Way | Best for | What's there |
 |---|---|---|
 | [**Website**](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/course/) | visual learning | theory, lessons, and watching answers run line by line, in the browser |
+| [**SQL IDE**](https://abpandey-dev.github.io/data-engineering-from-scratch-to-advanced/ide/sql.html) | practising SQL | real SQL in your browser on 4 sample databases, with 43 questions that check your answer |
 | [**Notebooks**](notebooks/README.md) | working through it, teacher-style | self-checking practice, hidden hints and answers. Open in Colab with nothing to install |
 | [**Labs**](labs/README.md) | building | a complete pipeline, real PySpark, and 5 projects to build yourself |
 
@@ -49,6 +50,17 @@ A complete course for becoming a strong data engineer, with no experience needed
 | 20 | [Data System Design](notebooks/topics/20_system-design.ipynb) | How senior engineers think: a repeatable design framework, sizing, choosing tools and walkthroughs of clickstream analytics, CDC to a lake, real-time dashboards and data platforms, with the trade-offs interviewers want to hear. |
 | 21 | [Data Engineering for AI](notebooks/topics/21_data-for-ai.ipynb) | The data behind models and LLMs: feature stores and point-in-time joins, leakage, dataset versioning, RAG ingestion pipelines, incremental embedding, deduplication, PII scrubbing and evaluation data. It's a bridge from data engineering to AI engineering. |
 
+## The SQL IDE
+
+Write SQL and run it on real SQLite in your browser, with nothing to install and nothing you can break.
+
+- **Sample databases:** browse tables and columns, preview rows, and reset any changes.
+- **Practice:** 43 questions check your result against the expected answer, with hints, expected output, model answers and saved progress.
+- **Help when it fails:** error messages come with plain-English hints, and wrong answers tell you what looks off, such as too many rows or the wrong order.
+- **Editor:** highlighting, completion with Ctrl + Space, and running just the selected text.
+
+Practice data is built from the course's tested questions by `scripts/build_sql_practice.py`.
+
 ## What's real, and what's a simulation
 
 Spark, Kafka and Airflow can't run in a browser, so practice questions model how they work in plain Python, which also makes the mechanics easy to see. That means:
@@ -69,6 +81,7 @@ To rebuild after changing content (this needs numpy, pandas and matplotlib):
 
 ```bash
 python3 engine/build.py --book course
+python3 scripts/build_sql_practice.py
 python3 notebooks/build_notebooks.py
 python3 notebooks/verify_notebooks.py answers
 ```

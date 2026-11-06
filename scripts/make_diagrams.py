@@ -44,7 +44,7 @@ def how_it_works():
 OUTCOMES = [
     ("420", "tested questions", "A step-by-step and an efficient answer for each, which you can watch run", "#0F766E"),
     ("91", "lessons", "Worked by hand with real numbers, explaining why things work", "#2563EB"),
-    ("22", "teacher notebooks", "With self-checking practice, hidden hints and answers", "#7C3AED"),
+    ("22", "teacher notebooks", "Open in Colab, with self-checking practice and hidden hints", "#7C3AED"),
     ("2", "hands-on labs", "A complete pipeline, and real PySpark, plus 5 projects to build", "#C2410C"),
 ]
 
